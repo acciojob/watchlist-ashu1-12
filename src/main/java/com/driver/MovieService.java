@@ -34,11 +34,7 @@ public class MovieService {
     }
 
     public List<String> findAllMovies() {
-        //List<Movie> listOfAllMovies = movieRepository.findAllMovies();
         List<String> listOfMoviesName =movieRepository.findAllMovies();
-//        for(Movie movie:listOfAllMovies){
-//            listOfMoviesName.add(movie.getName());
-//        }
         return listOfMoviesName;
     }
 
