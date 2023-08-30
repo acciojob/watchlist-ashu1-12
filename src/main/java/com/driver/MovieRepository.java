@@ -17,9 +17,8 @@ public class MovieRepository {
         return moviesdb.get(movieName);
     }
     //add movie
-    public String addMovie(Movie movie) {
+    public void addMovie(Movie movie) {
         moviesdb.put(movie.getName(),movie);
-        return "Movie added successfully";
     }
     //add director
     public void addDirector(Director director) {
@@ -29,12 +28,10 @@ public class MovieRepository {
     public Director getDirector(String directorName) {
         return directordb.get(directorName);
     }
+
     //list of all movies
     public List<String> findAllMovies() {
         List<String> listOfAllMovies = new ArrayList<>(moviesdb.keySet());
-//        for(String movieName : moviesdb.keySet())
-//            listOfAllMovies.add(movieName);
-
         return listOfAllMovies;
     }
 
