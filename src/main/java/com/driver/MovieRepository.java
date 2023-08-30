@@ -62,7 +62,11 @@ public class MovieRepository {
 
     //delete all directors and movies records.
     public void deleteAllDirectors() {
-        moviesdb.clear();
+        for(String directorName : movieDirector_db.keySet()){
+            List<String> movies = movieDirector_db.get(directorName);
+            for(String m:movies)
+                moviesdb.remove(m);
+        }
         directordb.clear();
         movieDirector_db.clear();
     }
